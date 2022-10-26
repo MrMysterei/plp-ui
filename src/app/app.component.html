@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <strong>M.U.L.T.I.P.A.S.S. : My Utility Links To Important Places And Similar Stuff</strong>
+  </div>
+  <div class="panel-body" style="background-color: silver;">
+    <app-global-search (searchValue)="handleSearch($event)"></app-global-search>
+    <div class="row">
+      <app-links-panel *ngFor="let category of categories" [filteredLinks]='GetLinksByCategory(category.id)'></app-links-panel>
+    </div>
+  </div>
+  <div class="panel-footer">
+    &copy; ME, Dammit! ;-)
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<ul class="list-group">
+    <a *ngFor="let link of linkList" class="list-group-item" target="_blank" title="{{link.title + ' - ' + link.url}}" [href]='link.url'>{{link.title}}</a>
+    <a *ngIf="linkList?.length === 0" class="list-group-item" [ngStyle]="{'background-color': 'silver', 'text-align':'center', 'color': 'black'}" title="No Links In This Category">Category Has No Links</a>
+</ul>
