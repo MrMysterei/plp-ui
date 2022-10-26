@@ -1,27 +1,20 @@
-# Plp
+# Project "Personal Links Portal"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+This is a simple SPA to be used as a personal links portal (as an analogous replacement for simply using browser-based links & folders).
 
-## Development server
+The intent of this project is to gain familiarity with the Angular framework & related technologies (Typescript, CSS/SCSS, etc).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# To-Dos (in no particular order):
 
-## Code scaffolding
+* Establish a cloud-based back-end data store for the links, their data & a simple user list (for access control & CRUD operations of categories, links and users).
+* Create a CRUD operations UI for managing categories, links and users.
+** When adding new links, implement link target metadata scraping & facilitate auto-populating the title, description, etc. based on that metadata.
+* Make the UI dynamic so that there can be different types of category representations (not just link panels).
+** Link panels
+** Button drop-lists
+** Link bars
+** Other...?
+* Authentication/Authorization support.
+* Implement a global search bar. This will allow for searching of all link lists & will show matches in their respective categories.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
