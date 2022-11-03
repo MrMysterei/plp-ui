@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from './Link';
-import { LINKS } from './mock-links';
-import { CATEGORIES } from './mock-categories';
 import { Category } from './Category';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -12,8 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
     title: string = 'Multipass';
-    links: Link[] = LINKS;
-    categories: Category[] = CATEGORIES;
+    links!: Link[];
+    categories!: Category[];
     filter: string = '';
     apiUrl: string = 'http://localhost:5001/';
 

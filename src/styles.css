@@ -16,7 +16,6 @@ body {
 .container {
     background-color: white;
     padding: 25px 5px 5px 5px;
-    /* width: 1024px !important; */
 }
 
 .container-flexible {
@@ -48,8 +47,7 @@ body {
 }
 
 .list-group {
-    min-height: 150px !important;
-    /* max-height: 193px !important; */
+    min-height: 164px !important;
     max-height: 164px !important;
     overflow-y: auto !important;
 }

@@ -1,11 +1,11 @@
 // Imports
 import { Component, Input, OnInit } from '@angular/core';
+import { __importDefault } from 'tslib';
 import { Category } from '../Category';
-import { CATEGORIES } from '../mock-categories';
 
 // Component Decorator
 @Component({
-    selector: 'app-links-panel',
+    selector: 'links-panel',
     templateUrl: './links-panel.component.html',
     styleUrls: ['./links-panel.component.css']
 })
@@ -20,7 +20,8 @@ export class LinksPanelComponent implements OnInit {
     category!: Category | undefined;
     visible: boolean = true;
 
-    @Input() filteredLinks!: any[];
+    @Input() FilteredLinks!: any[];
+    @Input() Categories!: Category[];
     @Input() PanelTitle!: string;
     @Input() PanelTypeId!: number;
     @Input() PanelWidth!: number;
@@ -28,15 +29,19 @@ export class LinksPanelComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        this.links = this.filteredLinks;
+        this.links = this.FilteredLinks;
 
         if (this.links.length > 0) {
             let currentCategoryId = this.links[0].categoryId;
 
-            this.category = CATEGORIES.find(x => x.id === currentCategoryId);
+            this.category = this.Categories.find(x => x.id === currentCategoryId);
 
             this.panelTitle = this.category!.name;
             this.panelColor = this.category!.color;
         }
+    }
+
+    categoryLinksCount(catId: number) {
+        return this.Categories.filter(x => x.id === catId).length;
     }
 }
