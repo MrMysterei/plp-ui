@@ -1,6 +1,6 @@
 <div class="col-md-{{this.panelWidth}}" *ngIf="links?.length !== 0">
     <div class="panel panel-info">
-        <div class="panel-heading panel_hdr"><span class="glyphicon glyphicon-eye-open" style="color: {{panelColor}};"></span> &nbsp; <strong>{{panelTitle}}</strong>
+        <div class="panel-heading panel_hdr"><span class="glyphicon glyphicon-eye-open" style="color: {{panelColor}};"></span> &nbsp; <strong>{{panelTitle}} - ({{linksCount()}} links)</strong>
             <span class="count"></span>
         </div>
         <div class="panel-body">
